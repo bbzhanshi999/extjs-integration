@@ -1,0 +1,181 @@
+@include extjs-tab-panel-ui(
+        $ui: 'maintab',
+        $ui-bar-background-color: #ECECEC,
+        $ui-tab-background-color: transparent,
+        $ui-tab-color: #919191,
+        $ui-tab-color-over: #919191,
+        $ui-tab-border-radius: 2px,
+        $ui-tab-font-size: 12px,
+        $ui-tab-font-size-over: 12px,
+        $ui-tab-font-size-active: 12px,
+        $ui-tab-line-height: 15px,
+        $ui-tab-padding: 4px
+        /* $ui-tab-padding:2px,
+      $ui-tab-text-padding : 4px,
+      $ui-bar-padding : 0px*/
+);
+
+@include extjs-panel-ui(
+        $ui: 'maintab' /*$ui-header-font-size: 12px,
+    $ui-header-line-height: 15px,
+    $ui-header-icon-height: 15px,
+    $ui-header-icon-spacing: 15px,
+    $ui-header-padding: 0,
+    $ui-header-text-margin: 24px*/
+)
+
+@include extjs-tab-panel-ui(
+        $ui: 'lefttab',
+        $ui-bar-background-color: #ECECEC,
+        $ui-tab-background-color: transparent,
+        $ui-tab-color: #919191,
+        $ui-tab-color-over: #919191,
+        $ui-tab-border-radius: 2px,
+        $ui-tab-font-size: 12px,
+        $ui-tab-font-size-over: 12px,
+        $ui-tab-font-size-active: 12px,
+        $ui-tab-line-height: 15px,
+        $ui-tab-padding: 2px,
+        $ui-bar-padding: 0px /* $ui-tab-padding:2px,
+    $ui-tab-text-padding : 4px,
+    $ui-bar-padding : 0px*/
+);
+
+@include extjs-panel-ui(
+        $ui: 'lefttab' /*$ui-header-font-size: 12px,
+    $ui-header-line-height: 15px,
+    $ui-header-icon-height: 15px,
+    $ui-header-icon-spacing: 15px,
+    $ui-header-padding: 0,
+    $ui-header-text-margin: 24px*/
+)
+
+.main-tab {
+  a.x-tab.x-tab-active {
+    @include box-shadow(1px 1px 2px 1px rgba(0, 0, 0, 0.2));
+  }
+}
+
+.x-title-icon-navigation {
+  font-family: FontAwesome;
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.x-tab-icon-el-navigation {
+  font-family: FontAwesome;
+  color: #acacac;
+
+  .x-tab-over & {
+    color: #c4c4c4;
+  }
+
+  .x-tab-active & {
+    color: #fff;
+  }
+}
+
+.x-panel-header-title-navigation > .x-title-text-navigation:after {
+  top: 30px;
+  right: -24px;
+}
+
+/**
+ * 顶部header菜单按钮样式
+ */
+@include extjs-button-small-ui(
+        $ui: 'header',
+        $font-size: 13px,
+        $color: #999,
+        $glyph-color: #919191,
+        $background-color: transparent,
+        $border-width: 0,
+        $background-color-pressed: #DADADA
+);
+
+@include extjs-button-small-ui(
+        $ui: 'user-btn',
+        $font-size: 13px,
+        $color: #999,
+        $glyph-color: #919191,
+        $background-color: transparent,
+        $border-width: 0
+);
+
+/**
+ * logo
+ */
+.logo {
+  background-color: #213745;
+  height: 65px;
+  font-size: 16px;
+  color: $lightest-color;
+
+  .main-logo {
+    img {
+      margin-left: 22px;
+      margin-right: 22px;
+      position: relative;
+    }
+  }
+}
+
+.shadow {
+  @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.2));
+}
+
+.header-bar {
+  padding: 0 20px 0 20px;
+  border: none;
+}
+
+.header-user {
+  border: none;
+}
+
+.header-wrap {
+  //padding:0 30px 0 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border: none;
+}
+.bottom-tool {
+  //padding:0 30px 0 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border: none;
+  padding:2px 0 2px 8px;
+  background-color:#ECECEC ;
+  @include box-shadow(0 -1px 2px 0 rgba(0, 0, 0, 0.2));
+  .x-btn-default-toolbar-small{
+      padding:0  !important;
+  }
+}
+
+.toast-class {
+  background-color: #747474;
+  color: #DADADA;
+  @include border-radius(2px);
+}
+
+.left-collapse {
+  padding: 16px 2px 0 2px !important;
+  border: none !important;
+  @include box-shadow(1px 0 2px 0 rgba(0, 0, 0, 0.2));
+}
+.left-panel{
+  z-index: 10;
+  @include box-shadow(1px 0 2px 0 rgba(0, 0, 0, 0.2));
+}
+
+
+.fullscreen-button{
+  position: fixed;
+  width: 50px;
+  top:35px;
+  right:20px;
+  z-index: 100;
+}

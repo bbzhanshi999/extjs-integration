@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/platform?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 1234
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/public/
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+
+server:
+  port: 12306
+  context-path: /integration
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+logging:
+  level:
+    root: debug
+
+#配置主键生成地址
+snowflake:
+  workerId: 1
+  datacenterId: 1
+
+security:
+  custom:
+    cachePrefix: authCode
+
+#mybatis的位置
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
